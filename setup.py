@@ -19,7 +19,7 @@ setup(
     keywords = "PIL",
     url = "https://github.com/robertoalotufo/adpil",
     packages=['adpil'],
-    long_description=read('README.md'),
+    long_description=read('README.txt'),
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Science/Research",
