@@ -300,6 +300,9 @@ def adshow(arr, title='adshow', id=0, slider=None, events=None, status=False):
             vw = ImageViewer.viewmap[id]
         else:
             vw = ImageViewer(arr, id, title, slider, events, status)
+        m, M = arr.min(), arr.max()
+        if (int(m) < 0) or (int(M) > 255):
+            raise IOError('Image is out of range 0 to 255: min=%d max=%d, use ianormalize' % (m,M))
         vw.show(arr, title)
 
 #
@@ -475,6 +478,8 @@ def array2pil(arr):
 #   addraw(arr, what, *args, **kw)
 #
 # =====================================================================
+
+
 class adDraw:
     """
     Proxy of the PIL module ImageDraw.
