@@ -68,7 +68,7 @@ def adread(imagefile):
 
     """
 
-    from PIL import Image
+    import Image
     img = findImageFile(imagefile)
     arr = pil2array(Image.open(img))
     return arr
@@ -91,7 +91,7 @@ def adreadgray(imagefile):
 
     """
 
-    from PIL import Image
+    import Image
     img = findImageFile(imagefile)
     arr = pil2array(Image.open(img).convert('L'))
     return arr

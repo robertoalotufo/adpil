@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name = "adpil",
-    version = "1.01",
+    version = "1.02",
     author = "RCM",
     author_email = "rubens.campos.machado@gmail.com",
     description = ("Interface between Adessowiki and PIL."
